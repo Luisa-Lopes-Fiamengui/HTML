@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DENIAL IS A RIVER IN EGYPT, UR HUSBAND IS GAY</title>
+    <style>
+      body {
+        background: #ff87bb;
+        color: #fff;
+        text-shadow: 2px 2px 5px #000000;
+      }
+    </style>
+  </head>
+  <body contenteditable>
+    <h1>AULA 01 - HTML | CSS | JS</h1>
+    <h2>Alerta de mensagem</h2>
+    <p style="text-align: center">
+      <button onclick="alerta()"
+      style="">Alerta</button>
+    </button>
+    </p>
+
+    <h2>altere a cor do fundo do site clicando em uma das cores abaixo:</h2>
+    <p style="text-align: center">
+        <button onclick="red()">red</button>
+        <button onclick="blue()">blue</button>
+        <button onclick="green()">green</button>
+        <button onclick="pink()">pink</button>
+    </p>
+  </body>
+  <script>
+      console.log("Ola mundo");
+      function alerta() {
+            var nome = prompt("ola informe seu nome")
+          alert(`ola ${nome}`)
+    }
+
+    function red(){
+        document.getElementsByTagName("body")[0].style.background = "#f64646";
+    }
+
+    function blue(){
+        document.getElementsByTagName("body")[0].style.background = "#4385e8";
+    }
+    function green(){
+        document.getElementsByTagName("body")[0].style.background = "#34db4a";
+    }
+    function pink(){
+        document.getElementsByTagName("body")[0].style.background = "#ff87bb";
+    }
+  </script>
+</html>
+
