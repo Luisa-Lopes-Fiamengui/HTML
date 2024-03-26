@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário</title>
 
-    <link rel="stylesheet" href="./css/style.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <h1 class="textoCentro fundoLindo">
-        <a href="form.html">Formulário</a>
+      <a href="form.html">Formulário</a>
       <a href="https://www.wattpad.com" target="_parent">Wattpad</a>
     </h1>
-    <form action="">
-        <h3>entre em contato</h3>
-        <p>ficamos felizes em atender o seu cu miserável! :D
-        </p>
-        <input type="password" size="40" placeholder="nome">
-        <input type="email" size="40" placeholder="e-mail">
-        <textarea 
-        name="" 
-        td="" 
-        cols="40"
-        rows="10" 
-        placeholder="mensagem"
+    <form class="textoCentro" onsubmit="console.log(`enviou`)">
+      <h3>entre em contato</h3>
+      <p>ficamos felizes em atender o seu cu miserável! :D</p>
+      <p>
+        <input id="nome" type="text" size="40" placeholder="nome" />
+        <input id="email" type="email" size="40" placeholder="e-mail" />
+        <textarea
+          name="areaTexto"
+          id="areaTexto"
+          cols="40"
+          rows="10"
+          placeholder="mensagem"
+          minlength="10"
+          required
         ></textarea>
-    </p>
-    <input type="button" value="enviar"/>
-        
-</body>
+      </p>
+      <input type="button" onclick="console.log(enviar())" value="enviar" />
+    </form>
+    <span id="resposta"></span>
+  </body>
+  <script src="./js/script.js"></script>
 </html>
