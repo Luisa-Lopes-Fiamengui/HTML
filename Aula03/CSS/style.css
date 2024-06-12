@@ -5,13 +5,30 @@
 }
 
 :root {
-  --bg-url: url(../img/darkmode.png);
+  --bg-url: url(../img/roxo.jpg);
+  --text-color: #fff;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.2);
+  --switch-gb-url: url(../img/MoonStars.svg);
+  --highlight-color: rgba(255, 255, 255, 0.3);
+}
+
+.Light {
+  --bg-url: url(../img/azul.jpg);
+  --text-color: #000;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --switch-gb-url: url(../img/Sun.svg);
+  --highlight-color: rgba(0, 0, 0, 0.3);
 }
 
 body {
   background: var(--bg-url) no-repeat top center / cover;
   height: 100vh;
-  color: white;
+  color: var(--text-color);
+  text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -51,7 +68,7 @@ body {
   height: 32px;
   border-radius: 50%;
   border: 0;
-  background: white url(../img/MoonStars.svg) no-repeat center;
+  background: white var(--switch-gb-url) no-repeat center;
 
   position: absolute;
   z-index: 1;
@@ -60,13 +77,17 @@ body {
   animation: slide-out 0.2s;
 }
 
+.Light #botao button {
+  animation: slide-in 0.2s forwards;
+}
+
 #botao button :hover {
-  outline: 8px solid rgba(255, 255, 255, 0.2);
+  outline: 8px solid var(--surface-color-hover);
   transition: all 0.2;
 }
 
 #botao span {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-color);
   display: block;
   width: 54px;
   height: 24px;
@@ -90,41 +111,41 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-color);
   text-decoration: none;
   font-weight: bold;
-  color: white;
+  color: var(--text-color);
 }
 
 #links ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
+  background: var(--surface-color-hover);
+  border: 1px solid var(--text-color);
 }
 
 #RedeSocial {
-    display: flex;
-    justify-content: center;
-    padding: 24px;
-    gap: 16px;
-    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  gap: 16px;
+  font-size: 24px;
 }
 
-#RedeSocial a{
-    text-decoration: none;
-    color: white;
+#RedeSocial a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 #Footer {
-    text-align: center;
-    font-size: 14px;
-    padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  padding: 24px;
 }
 
-#Footer a{
-    text-decoration: none;
-    color: white;
+#Footer a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 @keyframes slide-out {
