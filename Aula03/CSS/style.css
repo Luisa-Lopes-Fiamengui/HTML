@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -11,4 +11,136 @@
 body {
   background: var(--bg-url) no-repeat top center / cover;
   height: 100vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0px 24px;
+}
+
+#perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#perfil img {
+  max-width: 112px;
+  height: 112px;
+  object-fit: cover;
+}
+
+#perfil p {
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+#botao {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#botao button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background: white url(../img/MoonStars.svg) no-repeat center;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: slide-out 0.2s;
+}
+
+#botao button :hover {
+  outline: 8px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2;
+}
+
+#botao span {
+  background: rgba(255, 255, 255, 0.1);
+  display: block;
+  width: 54px;
+  height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+#links ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+#links ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+}
+
+#RedeSocial {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    gap: 16px;
+    font-size: 24px;
+}
+
+#RedeSocial a{
+    text-decoration: none;
+    color: white;
+}
+
+#Footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 24px;
+}
+
+#Footer a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
